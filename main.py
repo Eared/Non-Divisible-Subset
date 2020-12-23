@@ -27,7 +27,9 @@ def init():
         print("wrong input on first line")
         return
     # checking length of S
-    if len(subset_values) == subset_stats[0] and 1 >= subset_values[0] <= 100000:
+    if len(subset_values) == subset_stats[0]:
+        for elm in subset_values: 
+            if 1 >= elm <= 100000:
         print("wrong input on second line")
         return
 
