@@ -13,7 +13,6 @@ def init():
         file.close()
     except IOError:
         print("file doesn't exist!")
-    finally:
         return
 
     #subset_stats = input("Enter n and k: ")
