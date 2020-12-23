@@ -48,8 +48,9 @@ def init():
     def check_max_occurrences():
         max_occurrences = [0, 0]
         for elm in subset_values:
-            if max_occurrences[1] < count_occurrences(elm)[1]:
-                max_occurrences = count_occurrences(elm)
+            occurrences = count_occurrences(elm)
+            if max_occurrences[1] < occurrences[1]:
+                max_occurrences = coccurrences
         return max_occurrences
 
     for val in subset_values:
