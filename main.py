@@ -53,20 +53,13 @@ def init():
     Подсказка: задачу можно решить за количество операций O(n).
     """
     count_array = [0 for i in range(k)]
-
-    # looking for numbers that are module K
     for elm in subset_values:
         count_array[elm % k] += 1
-
     if k % 2 == 0:
         count_array[k // 2] = min(count_array[k // 2], 1)
-
     result = min(count_array[0], 1)
-
     for i in range(1, (k // 2) + 1):
         result += max(count_array[i], count_array[k - 1])
-
-
 
     # getting input number
     link_num = "".join(filter(str.isdigit, input_link))
